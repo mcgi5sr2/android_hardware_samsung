@@ -37,10 +37,7 @@ enum Type {
     SEMCOSH,
     SEMCOVE,
     SEMCO3RD,
-<<<<<<< HEAD:macloader/macloader.c
     SEMCO,
-=======
->>>>>>> f6ec8f7... macloader: Add SEMCO3RD and WISOL for BCM4354.:macloader/macloader.cpp
     WISOL
 };
 
@@ -112,15 +109,12 @@ int main() {
         type = SEMCO3RD;
     }
 
-<<<<<<< HEAD:macloader/macloader.c
     /* semco */
     if (strncasecmp(mac_addr_half, "c0:bd:d1", 9) == 0 ||
         strncasecmp(mac_addr_half, "51:f6:6b", 9) == 0) {
         type = SEMCO;
     }
 
-=======
->>>>>>> f6ec8f7... macloader: Add SEMCO3RD and WISOL for BCM4354.:macloader/macloader.cpp
     /* wisol */
     if (strncasecmp(mac_addr_half, "48:5A:3F", 9) == 0) {
         type = WISOL;
@@ -154,7 +148,6 @@ int main() {
             case SEMCO3RD:
                 type_str = "semco3rd";
             break;
-<<<<<<< HEAD:macloader/macloader.c
             case SEMCO:
                 type_str = "semco";
                 break;
@@ -162,17 +155,6 @@ int main() {
                 type_str = "wisol";
             break;
         }
-=======
-            case SEMCO3RD:
-                ALOGI("Writing semco3rd to %s\n", CID_PATH);
-                ret = fputs("semco3rd", cidfile);
-            break;
-            case WISOL:
-                ALOGI("Writing wisol to %s\n", CID_PATH);
-                ret = fputs("wisol", cidfile);
-            break;
-         }
->>>>>>> f6ec8f7... macloader: Add SEMCO3RD and WISOL for BCM4354.:macloader/macloader.cpp
 
         ALOGI("Settting wifi type to %s in %s\n", type_str, CID_PATH);
 
