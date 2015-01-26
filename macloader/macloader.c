@@ -23,8 +23,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
+<<<<<<< HEAD
 #include <unistd.h>
 #include <pwd.h>
+=======
+>>>>>>> 7d73968... macloader: Fix build warning with LOG defines.
 
 #include <cutils/log.h>
 
