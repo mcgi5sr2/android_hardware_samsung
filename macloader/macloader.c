@@ -24,7 +24,10 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <unistd.h>
+<<<<<<< HEAD
 #include <pwd.h>
+=======
+>>>>>>> 239707a... macloader: Use fchmod() to change permissions.
 
 #include <cutils/log.h>
 
@@ -170,8 +173,13 @@ int main() {
         fd = fileno(cidfile);
         amode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH;
         ret = fchmod(fd, amode);
+<<<<<<< HEAD
         if (ret != 0) {
             fclose(cidfile);
+=======
+        fclose(cidfile);
+        if (ret != 0) {
+>>>>>>> 239707a... macloader: Use fchmod() to change permissions.
             ALOGE("Can't set permissions on %s - %s\n",
                   CID_PATH, strerror(errno));
             return 1;
@@ -185,6 +193,7 @@ int main() {
             return 1;
         }
 
+<<<<<<< HEAD
         ret = fchown(fd, pwd->pw_uid, pwd->pw_gid);
         fclose(cidfile);
         if (ret != 0) {
@@ -192,6 +201,8 @@ int main() {
                   CID_PATH, strerror(errno));
             return 1;
         }
+=======
+>>>>>>> 239707a... macloader: Use fchmod() to change permissions.
     } else {
         /* delete cid file if no specific type */
         ALOGD("Deleting file %s\n", CID_PATH);
