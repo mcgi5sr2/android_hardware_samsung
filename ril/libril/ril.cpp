@@ -314,7 +314,7 @@ static int responseSSData(Parcel &p, void *response, size_t responselen);
 
 static int decodeVoiceRadioTechnology (RIL_RadioState radioState);
 static int decodeCdmaSubscriptionSource (RIL_RadioState radioState);
-static RIL_RadioState processRadioState(RIL_RadioState newRadioState, RIL_SOCKET_ID socket_id);
+static RIL_RadioState processRadioState(RIL_RadioState newRadioState);
 
 static bool isServiceTypeCfQuery(RIL_SsServiceType serType, RIL_SsRequestType reqType);
 
@@ -4683,7 +4683,7 @@ static bool is3gpp2(int radioTech) {
  * returned when telephony framework requests them
  */
 static RIL_RadioState
-processRadioState(RIL_RadioState newRadioState, RIL_SOCKET_ID socket_id __unused) {
+processRadioState(RIL_RadioState newRadioState, RIL_SOCKET_ID socket_id) {
 
     if((newRadioState > RADIO_STATE_UNAVAILABLE) && (newRadioState < RADIO_STATE_ON)) {
         int newVoiceRadioTech;
