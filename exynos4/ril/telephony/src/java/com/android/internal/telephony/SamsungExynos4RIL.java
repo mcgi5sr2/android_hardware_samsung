@@ -114,9 +114,12 @@ public class SamsungExynos4RIL extends RIL implements CommandsInterface {
     static final int RIL_UNSOL_UTS_GET_UNREAD_SMS_STATUS = 11031;
     static final int RIL_UNSOL_MIP_CONNECT_STATUS = 11032;
 
-    public SamsungExynos4RIL(Context context, int preferredNetworkType,
-            int cdmaSubscription, Integer instanceId) {
-        super(context, preferredNetworkType, cdmaSubscription, instanceId);
+    private Object mCatProCmdBuffer;
+    /* private Message mPendingGetSimStatus; */
+
+    public SamsungExynos4RIL(Context context, int networkMode, int cdmaSubscription, Integer instanceId) {
+        super(context, networkMode, cdmaSubscription, instanceId);
+        mQANElements = 5;
     }
 
     static String
