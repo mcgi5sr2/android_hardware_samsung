@@ -14,11 +14,11 @@
 ** See the License for the specific language governing permissions and
 ** limitations under the License.
 */
-    {10000, NULL, NULL}, // 10000
-    {10001, NULL, NULL}, // 10001
+    {10000, NULL, NULL},
+    {10001, NULL, NULL},
     {RIL_REQUEST_GET_CELL_BROADCAST_CONFIG, dispatchVoid, responseVoid},
-    {10003, NULL, NULL}, // 10003
-    {10004, NULL, NULL}, // 10004
+    {10003, NULL, NULL},
+    {10004, NULL, NULL},
     {RIL_REQUEST_SEND_ENCODED_USSD, dispatchVoid, responseVoid},
     {RIL_REQUEST_SET_PDA_MEMORY_STATUS, dispatchVoid, responseVoid},
     {RIL_REQUEST_GET_PHONEBOOK_STORAGE_INFO, dispatchVoid, responseVoid},
@@ -29,7 +29,7 @@
     {RIL_REQUEST_READ_SMS_FROM_SIM, dispatchVoid, responseVoid},
     {RIL_REQUEST_USIM_PB_CAPA, dispatchVoid, responseVoid},
     {RIL_REQUEST_LOCK_INFO, dispatchVoid, responseVoid},
-    {10015, NULL, NULL}, // 10015
+    {10015, NULL, NULL},
     {RIL_REQUEST_DIAL_EMERGENCY, dispatchDial, responseVoid},
     {RIL_REQUEST_GET_STOREAD_MSG_COUNT, dispatchVoid, responseVoid},
     {RIL_REQUEST_STK_SIM_INIT_EVENT, dispatchVoid, responseVoid},
